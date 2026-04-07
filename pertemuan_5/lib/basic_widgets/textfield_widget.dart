@@ -8,9 +8,9 @@ class TextFieldWidget extends StatelessWidget {
     final double screenWidth = MediaQuery.of(context).size.width;
     final double fieldWidth = screenWidth > 600 ? 420 : screenWidth * 0.85;
 
-    return Scaffold(
-      appBar: AppBar(title: const Text('Contoh TextField')),
-      body: Center(
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
         child: SizedBox(
           width: fieldWidth,
           child: const TextField(

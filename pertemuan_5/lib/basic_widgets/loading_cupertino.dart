@@ -6,16 +6,18 @@ class LoadingCupertinoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Container(
-        margin: const EdgeInsets.only(top: 30),
+    return Center(
+      child: Container(
+        margin: const EdgeInsets.only(top: 8),
         color: Colors.white,
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             CupertinoButton(
-              child: const Text("Contoh button"),
               onPressed: () {},
+              child: const Text('Contoh button'),
             ),
+            const SizedBox(height: 12),
             const CupertinoActivityIndicator(),
           ],
         ),

@@ -3,9 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class DatePickerWidget extends StatefulWidget {
-  const DatePickerWidget({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+  const DatePickerWidget({Key? key}) : super(key: key);
 
   @override
   State<DatePickerWidget> createState() => _DatePickerWidgetState();
@@ -34,35 +32,24 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
     final double screenWidth = MediaQuery.of(context).size.width;
     final double buttonWidth = screenWidth > 600 ? 260 : screenWidth * 0.6;
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Text('${selectedDate.toLocal()}'.split(' ')[0]),
-              const SizedBox(height: 20.0),
-              SizedBox(
-                width: buttonWidth,
-                child: ElevatedButton(
-                  onPressed: () {
-                    selectDate(context);
-                    // ignore: avoid_print
-                    print(
-                      selectedDate.day +
-                          selectedDate.month +
-                          selectedDate.year,
-                    );
-                  },
-                  child: const Text('Pilih Tanggal'),
-                ),
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Text('${selectedDate.toLocal()}'.split(' ')[0]),
+            const SizedBox(height: 20.0),
+            SizedBox(
+              width: buttonWidth,
+              child: ElevatedButton(
+                onPressed: () {
+                  selectDate(context);
+                },
+                child: const Text('Pilih Tanggal'),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
