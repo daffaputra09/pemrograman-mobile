@@ -86,4 +86,4 @@ Widget buttonSection = Row(
 ### Langkah 3: Tambah button section ke body
 Tambahkan variabel buttonSection ke dalam body seperti berikut:
 
-
+![gambar 3](assets/praktikum_2/langkah_3.png)
