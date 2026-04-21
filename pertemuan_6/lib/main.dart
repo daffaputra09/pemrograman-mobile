@@ -54,6 +54,18 @@ class MyApp extends StatelessWidget {
       ],
     );
 
+    Widget textSection = Container(
+      padding: const EdgeInsets.all(32),
+      child: const Text(
+        'Wisata Gunung di Batu merupakan destinasi alam yang menawarkan '
+        'udara sejuk, pemandangan perbukitan, dan suasana yang cocok untuk '
+        'berlibur bersama keluarga. Pengunjung dapat menikmati panorama kota '
+        'dari ketinggian serta berbagai spot foto menarik di sekitar area wisata. '
+        'Daffa Putra Prasetya (NIM 244107060088).',
+        softWrap: true,
+      ),
+    );
+
     return MaterialApp(
       title: 'Flutter layout: Nama dan NIM Anda',
       home: Scaffold(
@@ -64,6 +76,7 @@ class MyApp extends StatelessWidget {
           children: [
             titleSection,
             buttonSection,
+            textSection,
           ],
         ),
       ),
