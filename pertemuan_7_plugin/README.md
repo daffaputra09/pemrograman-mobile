@@ -19,7 +19,7 @@ Tambahkan plugin auto_size_text menggunakan perintah berikut di terminal
 flutter pub add auto_size_text
 ```
 
-![gambar 1](assets/praktikum_1/langkah_2.png)
+![gambar 1](assets/praktikum/langkah_2.png)
 Jika berhasil, maka akan tampil nama plugin beserta versinya di file pubspec.yaml pada bagian dependencies.
 
 
@@ -38,7 +38,7 @@ class RedTextWidget extends StatelessWidget {
 }
 ```
 
-![gambar 2](assets/praktikum_1/langkah_3.png)
+![gambar 2](assets/praktikum/langkah_3.png)
 
 ### Langkah 4: Tambah Widget AutoSizeText
 Masih di file red_text_widget.dart, untuk menggunakan plugin auto_size_text, ubahlah kode return Container() menjadi seperti berikut.
@@ -52,7 +52,7 @@ return AutoSizeText(
 );
 ```
 
-![gambar 3](assets/praktikum_1/langkah_4.png)
+![gambar 3](assets/praktikum/langkah_4.png)
 
 
 ### Langkah 5: Buat Variabel text dan parameter di constructor
@@ -63,7 +63,7 @@ final String text;
 const RedTextWidget({Key? key, required this.text}) : super(key: key);
 ```
 
-![gambar 4](assets/praktikum_1/langkah_5.png)
+![gambar 4](assets/praktikum/langkah_5.png)
 
 ### Langkah 6: Tambahkan widget di main.dart
 Buka file main.dart lalu tambahkan di dalam children: pada class _MyHomePageState
@@ -86,7 +86,7 @@ Container(
 
 Run aplikasi tersebut dengan tekan F5, maka hasilnya akan seperti berikut.
 
-![gambar 5](assets/praktikum_1/hasil.png)
+![gambar 5](assets/praktikum/hasil.png)
 
 
 ---
